@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daal Khor (by Omar Noor) - Nike Mercurial Superfly 11 Elite</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        volt: '#E0FF00',
+                        neonOrange: '#FF4D00',
+                        neonCyan: '#00F2FE',
+                        obsidian: '#0B0F19',
+                        darkCard: '#131A29',
+                        glowBorder: '#1F293D'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Teko', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #0B0F19;
+            color: #F3F4F6;
+            overflow-x: hidden;
+        }
+        .glow-volt {
+            box-shadow: 0 0 25px rgba(224, 255, 0, 0.35);
+        }
+        .glow-text-volt {
+            text-shadow: 0 0 12px rgba(224, 255, 0, 0.6);
+        }
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(224, 255, 0, 0.1) 1px, transparent 0);
+            background-size: 30px 30px;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0B0F19; }
+        ::-webkit-scrollbar-thumb { background: #1F293D; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #E0FF00; }
+    </style>
+</head>
+<body class="bg-obsidian text-gray-100 font-sans selection:bg-volt selection:text-black">
+
+    <header class="sticky top-0 z-50 bg-obsidian/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <a href="#" class="flex items-center gap-3 group">
+                    <img src="https://images.crowdspring.com/blog/wp-content/uploads/2023/11/16175527/nike-logo.png" 
+                         alt="Nike Logo" 
+                         class="h-10 w-auto object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] group-hover:scale-105 transition-transform"
+                         onerror="this.src='https://placehold.co/100x50/000000/FFFFFF?text=NIKE'">
+                    <div class="flex flex-col">
+                        <span class="font-display text-3xl font-bold tracking-wider text-white uppercase leading-none group-hover:text-volt transition-colors">
+                            DAAL KHOR
+                        </span>
+                        <span class="text-[10px] tracking-widest text-volt uppercase font-semibold">
+                            BY OMAR NOOR
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold tracking-wide uppercase">
+                <a href="#overview" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">Overview</a>
+                <a href="#studio360" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">360° Studio</a>
+                <a href="#techspecs" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">Tech Specs</a>
+                <a href="#speedlab" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">Speed Lab</a>
+                <a href="#gallery" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">Gallery</a>
+                <a href="#reviews" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">Reviews</a>
+                <a href="#faq" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">FAQ</a>
+                <a href="contact.html" class="px-4 py-2 bg-gradient-to-r from-volt to-neonCyan text-black font-extrabold rounded-full hover:shadow-[0_0_15px_rgba(224,255,0,0.8)] transition-all transform hover:-translate-y-0.5">
+                    CONTACT US <i class="fa-solid font-bold fa-arrow-right ml-1"></i>
+                </a>
+            </nav>
+
+            <button id="mobileMenuBtn" class="lg:hidden text-2xl text-volt focus:outline-none p-2">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobileNav" class="hidden lg:hidden bg-darkCard border-b border-gray-800 px-6 py-4 space-y-3 font-semibold uppercase text-sm">
+            <a href="#overview" class="block hover:text-volt py-1">Overview</a>
+            <a href="#studio360" class="block hover:text-volt py-1">360° Studio</a>
+            <a href="#techspecs" class="block hover:text-volt py-1">Tech Specs</a>
+            <a href="#speedlab" class="block hover:text-volt py-1">Speed Lab</a>
+            <a href="#gallery" class="block hover:text-volt py-1">Gallery</a>
+            <a href="#reviews" class="block hover:text-volt py-1">Reviews</a>
+            <a href="#faq" class="block hover:text-volt py-1">FAQ</a>
+            <a href="contact.html" class="block text-center py-2 bg-volt text-black font-bold rounded-lg mt-2">
+                CONTACT US <i class="fa-solid fa-envelope ml-1"></i>
+            </a>
+        </div>
+    </header>
+
+    <section id="overview" class="relative pt-10 pb-20 overflow-hidden bg-grid-pattern">
+        <div class="absolute top-1/4 left-10 w-96 h-96 bg-volt/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-neonOrange/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6 z-10">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 bg-volt/10 border border-volt/30 rounded-full text-volt text-xs font-bold tracking-widest uppercase">
+                        <span class="w-2 h-2 rounded-full bg-volt animate-ping"></span>
+                        <span>Official Release • Daal Khor Exclusive</span>
+                    </div>
+
+                    <h1 class="font-display text-6xl sm:text-7xl font-extrabold uppercase tracking-tight text-white leading-none">
+                        MERCURIAL <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-volt via-white to-neonCyan glow-text-volt">
+                            SUPERFLY 11 ELITE
+                        </span>
+                    </h1>
+
+                    <p class="text-gray-400 text-base sm:text-lg leading-relaxed">
+                        Unleash unmatched explosive acceleration on firm ground pitches. Engineered with a full 3/4 length Air Zoom unit and precision Flyknit-Gripknit upper tailored specifically for game-changers.
+                    </p>
+
+                    <div class="flex items-baseline gap-4 py-2">
+                        <span class="font-display text-5xl font-black text-volt tracking-tight">1,029 AED</span>
+                        <span class="text-gray-500 line-through text-lg font-semibold">1,499 AED</span>
+                        <span class="px-2 py-0.5 bg-neonOrange/20 border border-neonOrange text-neonOrange text-xs font-bold rounded">SAVE 31%</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="font-bold uppercase text-gray-300">Select US Size:</span>
+                            <a href="#size-guide" class="text-xs text-volt hover:underline flex items-center gap-1">
+                                <i class="fa-solid fa-ruler-horizontal"></i> Fitting Calculator
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-5 gap-2" id="heroSizeGrid">
+                            <button onclick="selectHeroSize(this, 'US 7.0')" class="size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all">7.0</button>
+                            <button onclick="selectHeroSize(this, 'US 8.0')" class="size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all">8.0</button>
+                            <button onclick="selectHeroSize(this, 'US 9.0')" class="size-btn py-2 bg-volt text-black border border-volt font-bold rounded-lg shadow-lg">9.0</button>
+                            <button onclick="selectHeroSize(this, 'US 10.0')" class="size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all">10.0</button>
+                            <button onclick="selectHeroSize(this, 'US 11.0')" class="size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all">11.0</button>
+                            <button onclick="selectHeroSize(this, 'US 11.5')" class="size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all">11.5</button>
+                            <button onclick="selectHeroSize(this, 'US 12.0')" class="size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all">12.0</button>
+                            <button onclick="selectHeroSize(this, 'US 12.5')" class="size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all">12.5</button>
+                        </div>
+                        <p id="selectedSizeText" class="text-xs text-gray-400">Selected Size: <span class="text-volt font-bold">US 9.0</span> (Ready for Express Shipping)</p>
+                    </div>
+
+                    <div class="pt-4 space-y-4">
+                        <div class="flex items-center space-x-3 text-xs text-green-400 font-semibold bg-green-950/40 border border-green-800/50 p-2.5 rounded-lg">
+                            <i class="fa-solid fa-circle-check text-green-400 text-sm"></i>
+                            <span>In Stock • Ships within 24 Hours in UAE & GCC</span>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://www.nike.ae/en/mercurial-superfly-11-elite-firm-ground-low-top-soccer-cleats/NKIO8219-900.html?srsltid=AU7gw4WJlu-sl6w27dr-p2f6ypYjBt9-Hpq6iJ6PTkPiBkze7YHIqlDy" 
+                               target="_blank" 
+                               class="flex-1 py-4 px-8 bg-gradient-to-r from-volt via-yellow-400 to-neonOrange text-black font-black text-center text-lg rounded-xl shadow-[0_0_30px_rgba(224,255,0,0.4)] hover:shadow-[0_0_40px_rgba(224,255,0,0.7)] hover:scale-[1.02] active:scale-95 transition-all uppercase tracking-wider flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cart-shopping text-xl"></i> Buy Now • 1,029 AED
+                            </a>
+                            <a href="#studio360" class="py-4 px-6 bg-darkCard hover:bg-gray-800 border border-gray-700 text-gray-200 font-bold rounded-xl text-center transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cube"></i> View 360°
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col items-center justify-center relative">
+                    <div class="relative w-full aspect-square max-w-xl bg-gradient-to-b from-darkCard/80 to-obsidian border border-glowBorder rounded-3xl p-6 flex items-center justify-center group overflow-hidden shadow-2xl">
+                        <div class="absolute top-4 left-4 bg-obsidian/80 backdrop-blur-md px-3 py-1.5 border border-volt/30 rounded-lg flex items-center gap-2 text-xs font-bold text-volt z-10">
+                            <i class="fa-solid fa-bolt"></i> Zoom Air Cushioning
+                        </div>
+
+                        <img id="mainHeroImg" 
+                             src="https://stepsarab.com/cdn/shop/files/NK_NKIO8219_900_198729677327_12.jpg?v=1789496346&width=713" 
+                             alt="Nike Mercurial Superfly 11 Elite" 
+                             class="max-h-[85%] w-auto object-contain transition-all duration-500 transform group-hover:scale-105 drop-shadow-[0_20px_35px_rgba(0,0,0,0.8)]"
+                             onerror="this.src='https://placehold.co/600x600/131A29/FFFFFF?text=Nike+Mercurial'">
+
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 p-2 bg-obsidian/90 backdrop-blur-md rounded-2xl border border-gray-800 max-w-[95%] overflow-x-auto scrollbar-none">
+                            <img src="https://stepsarab.com/cdn/shop/files/NK_NKIO8219_900_198729677327_12.jpg?v=1789496346&width=713" 
+                                 onclick="switchHeroImg(this.src)" 
+                                 class="hero-thumb w-12 h-12 rounded-lg object-cover border-2 border-volt cursor-pointer hover:opacity-100 transition-all">
+                            <img src="https://stepsarab.com/cdn/shop/files/NK_NKIO8219_900_198729677327_11.jpg?v=1789496346&width=713" 
+                                 onclick="switchHeroImg(this.src)" 
+                                 class="hero-thumb w-12 h-12 rounded-lg object-cover border-2 border-transparent hover:border-volt opacity-70 hover:opacity-100 cursor-pointer transition-all">
+                            <img src="https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwb8808240/nk/NK_/N/K/I/O/8/2/NK_NKIO8219_900_198729677327_1.jpg?sw=700&sh=700&sm=fit&q=100&strip=false" 
+                                 onclick="switchHeroImg(this.src)" 
+                                 class="hero-thumb w-12 h-12 rounded-lg object-cover border-2 border-transparent hover:border-volt opacity-70 hover:opacity-100 cursor-pointer transition-all">
+                            <img src="https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwea74ac12/nk/NK_/N/K/I/O/8/2/NK_NKIO8219_900_198729677327_2.jpg?sw=700&sh=700&sm=fit&q=100&strip=false" 
+                                 onclick="switchHeroImg(this.src)" 
+                                 class="hero-thumb w-12 h-12 rounded-lg object-cover border-2 border-transparent hover:border-volt opacity-70 hover:opacity-100 cursor-pointer transition-all">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="studio360" class="py-20 bg-darkCard border-y border-gray-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-volt text-xs font-bold tracking-widest uppercase bg-volt/10 px-3 py-1 rounded-full border border-volt/20">Full Angle Exploration</span>
+                <h2 class="font-display text-5xl font-black uppercase text-white mt-2">Interactive 360° Studio Viewer</h2>
+                <p class="text-gray-400 text-sm sm:text-base mt-2">Drag slider or select from all 12 perspective angles to inspect every stitch of the Mercurial Superfly 11 Elite.</p>
+            </div>
+
+            <div class="bg-obsidian border border-gray-800 rounded-3xl p-6 sm:p-10 shadow-2xl flex flex-col items-center">
+                <div class="relative w-full max-w-2xl aspect-[4/3] flex items-center justify-center bg-darkCard/50 rounded-2xl p-4 overflow-hidden group">
+                    <img id="viewer360Img" 
+                         src="https://stepsarab.com/cdn/shop/files/NK_NKIO8219_900_198729677327_12.jpg?v=1789496346&width=713" 
+                         alt="360 View" 
+                         class="max-h-full max-w-full object-contain transition-all duration-300 transform group-hover:scale-105">
+                    <div class="absolute bottom-4 right-4 bg-obsidian/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono text-volt border border-volt/30">
+                        Angle: <span id="angleIndex">1</span> / 12
+                    </div>
+                </div>
+
+                <div class="w-full max-w-xl mt-8 space-y-4">
+                    <div class="flex items-center justify-between text-xs font-bold text-gray-400 uppercase">
+                        <button onclick="rotate360(-1)" class="p-2 bg-darkCard hover:bg-volt hover:text-black rounded-lg transition-colors flex items-center gap-1">
+                            <i class="fa-solid fa-chevron-left"></i> Previous
+                        </button>
+                        <span>Rotate 360° View</span>
+                        <button onclick="rotate360(1)" class="p-2 bg-darkCard hover:bg-volt hover:text-black rounded-lg transition-colors flex items-center gap-1">
+                            Next <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <input type="range" id="studio360Slider" min="0" max="11" value="0" step="1" 
+                           oninput="update360FromSlider(this.value)" 
+                           class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-volt">
+                </div>
+
+                <div class="w-full mt-10">
+                    <h3 class="text-xs font-bold text-gray-400 uppercase mb-4 text-center">Click Angle Thumbnail (All 12 Official Views):</h3>
+                    <div class="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-12 gap-2" id="thumb360Grid"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="techspecs" class="py-20 bg-obsidian relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-neonCyan text-xs font-bold tracking-widest uppercase bg-neonCyan/10 px-3 py-1 rounded-full border border-neonCyan/20">Engineering & Precision</span>
+                <h2 class="font-display text-5xl font-black uppercase text-white mt-2">Deep Tech Breakdown</h2>
+                <p class="text-gray-400 text-base">Explore the breakthrough engineering that gives professional athletes an unbeatable edge.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-darkCard border border-gray-800 hover:border-volt/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-volt/10 text-volt flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold uppercase text-white mb-2">3/4 Air Zoom Unit</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Features an upgraded articulated 3/4 length Zoom Air unit embedded directly into the plate for maximum propulsive force.
+                    </p>
+                </div>
+
+                <div class="bg-darkCard border border-gray-800 hover:border-neonCyan/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-neonCyan/10 text-neonCyan flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-hand-fist"></i>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold uppercase text-white mb-2">Flyknit & Gripknit Upper</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Combines sticky Nike Gripknit material with micro-textured Flyknit to offer surgical touch control in all weather conditions.
+                    </p>
+                </div>
+
+                <div class="bg-darkCard border border-gray-800 hover:border-neonOrange/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-neonOrange/10 text-neonOrange flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold uppercase text-white mb-2">Wave-like Traction</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Cascading wave stud configuration provides multi-directional grip for sudden cuts, braking, and immediate acceleration.
+                    </p>
+                </div>
+
+                <div class="bg-darkCard border border-gray-800 hover:border-purple-500/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold uppercase text-white mb-2">Atomknit Heel Lock</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Contoured anatomical heel collar locks the foot down securely while drastically reducing slippage and blister points.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-darkCard border border-gray-800 rounded-3xl p-6 sm:p-8">
+                <h3 class="font-display text-3xl font-bold uppercase text-white mb-6">Technical Specifications Sheet</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm text-gray-300">
+                        <tbody class="divide-y divide-gray-800">
+                            <tr>
+                                <td class="py-3 font-bold text-gray-400 w-1/3">Weight (US 9)</td>
+                                <td class="py-3 text-volt font-bold">185 grams (Ultralight)</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-bold text-gray-400">Surface Compatibility</td>
+                                <td class="py-3">Firm Ground (FG) Pitch Conditions</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-bold text-gray-400">Insole Technology</td>
+                                <td class="py-3">Cushioned Anti-slip Perforated Sockliner</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-bold text-gray-400">Model Style Code</td>
+                                <td class="py-3 font-mono text-neonCyan">NKIO8219-900</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-bold text-gray-400">Retail Distribution</td>
+                                <td class="py-3">Daal Khor Authorized Retail (Omar Noor)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="speedlab" class="py-20 bg-darkCard border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-neonOrange text-xs font-bold tracking-widest uppercase bg-neonOrange/10 px-3 py-1 rounded-full border border-neonOrange/20">Interactive Dynamics</span>
+                    <h2 class="font-display text-5xl font-black uppercase text-white leading-tight">Speed Lab Acceleration Simulator</h2>
+                    <p class="text-gray-400 text-base">
+                        Test how pitch condition, player velocity, and the Air Zoom propulsion plate calculate sprint acceleration and energy output in real-time.
+                    </p>
+
+                    <div class="space-y-6 bg-obsidian p-6 rounded-2xl border border-gray-800">
+                        <div>
+                            <div class="flex justify-between text-xs font-bold uppercase mb-2">
+                                <span class="text-gray-300">Sprint Speed Goal (km/h)</span>
+                                <span id="speedVal" class="text-volt font-mono text-base">32 km/h</span>
+                            </div>
+                            <input type="range" id="speedInput" min="20" max="38" value="32" step="1" 
+                                   oninput="calculateSpeedMetrics()" 
+                                   class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-volt">
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-bold uppercase mb-2">
+                                <span class="text-gray-300">Pitch Condition</span>
+                                <span id="pitchVal" class="text-neonCyan font-mono text-base">Dry Natural FG</span>
+                            </div>
+                            <select id="pitchInput" onchange="calculateSpeedMetrics()" class="w-full bg-darkCard border border-gray-700 text-white py-2 px-3 rounded-lg text-sm font-semibold focus:border-volt focus:outline-none">
+                                <option value="1.0">Dry Natural FG Pitch (Optimal)</option>
+                                <option value="0.92">Slightly Wet Firm Ground</option>
+                                <option value="1.05">Artificial Grass (AG High Grip)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-obsidian border border-gray-800 rounded-3xl p-8 shadow-2xl relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-volt/10 rounded-full blur-2xl"></div>
+
+                    <h3 class="font-display text-3xl font-bold uppercase text-white mb-6 border-b border-gray-800 pb-4">Performance Metrics Calculation</h3>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-darkCard p-4 rounded-xl border border-gray-800 text-center">
+                            <span class="text-xs text-gray-400 font-bold uppercase">Energy Return</span>
+                            <p id="energyReturnMetric" class="font-display text-4xl font-extrabold text-volt mt-1">88.5%</p>
+                            <span class="text-[10px] text-gray-500">vs Standard Foam Plates</span>
+                        </div>
+
+                        <div class="bg-darkCard p-4 rounded-xl border border-gray-800 text-center">
+                            <span class="text-xs text-gray-400 font-bold uppercase">0-10m Sprint Boost</span>
+                            <p id="sprintTimeMetric" class="font-display text-4xl font-extrabold text-neonCyan mt-1">-0.14s</p>
+                            <span class="text-[10px] text-gray-500">Explosive Burst Time</span>
+                        </div>
+
+                        <div class="bg-darkCard p-4 rounded-xl border border-gray-800 text-center">
+                            <span class="text-xs text-gray-400 font-bold uppercase">Traction Rating</span>
+                            <p id="tractionMetric" class="font-display text-4xl font-extrabold text-neonOrange mt-1">9.8/10</p>
+                            <span class="text-[10px] text-gray-500">Anti-slip Stability</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs font-bold text-gray-400">
+                            <span>Acceleration Plate Responsiveness</span>
+                            <span id="responsivenessPercent" class="text-volt">94%</span>
+                        </div>
+                        <div class="w-full h-3 bg-darkCard rounded-full overflow-hidden border border-gray-800">
+                            <div id="responsivenessBar" class="h-full bg-gradient-to-r from-volt to-neonOrange transition-all duration-500" style="width: 94%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-obsidian">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-volt text-xs font-bold tracking-widest uppercase bg-volt/10 px-3 py-1 rounded-full border border-volt/20">High Definition Media</span>
+                <h2 class="font-display text-5xl font-black uppercase text-white mt-2">Product Photo Gallery</h2>
+                <p class="text-gray-400 text-sm sm:text-base mt-2">Filter and view all 12 official images in crystal clear high-resolution lightbox view.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button onclick="filterGallery('all', this)" class="gal-filter-btn px-5 py-2 rounded-full text-xs font-bold uppercase bg-volt text-black transition-all">All Photos (12)</button>
+                <button onclick="filterGallery('outsole', this)" class="gal-filter-btn px-5 py-2 rounded-full text-xs font-bold uppercase bg-darkCard hover:bg-gray-800 text-gray-300 border border-gray-800 transition-all">Outsole & Studs</button>
+                <button onclick="filterGallery('flyknit', this)" class="gal-filter-btn px-5 py-2 rounded-full text-xs font-bold uppercase bg-darkCard hover:bg-gray-800 text-gray-300 border border-gray-800 transition-all">Flyknit Upper</button>
+                <button onclick="filterGallery('angles', this)" class="gal-filter-btn px-5 py-2 rounded-full text-xs font-bold uppercase bg-darkCard hover:bg-gray-800 text-gray-300 border border-gray-800 transition-all">Angle Profile</button>
+            </div>
+
+            <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+        </div>
+    </section>
+
+    <section id="size-guide" class="py-20 bg-darkCard border-y border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-5xl font-black uppercase text-white">Interactive Fitting Calculator</h2>
+                <p class="text-gray-400 text-sm sm:text-base">Enter your foot length in centimeters to receive your exact recommended US Nike shoe size.</p>
+            </div>
+
+            <div class="bg-obsidian border border-gray-800 rounded-3xl p-6 sm:p-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <label class="block text-xs font-bold text-gray-300 uppercase">Foot Length (in CM):</label>
+                    <div class="flex gap-3">
+                        <input type="number" id="footLengthInput" placeholder="e.g. 27.0" step="0.5" min="20" max="35"
+                               class="flex-1 bg-darkCard border border-gray-700 text-white px-4 py-3 rounded-xl focus:border-volt focus:outline-none font-mono">
+                        <button onclick="calculateFitSize()" class="px-6 py-3 bg-volt text-black font-extrabold rounded-xl hover:bg-yellow-400 transition-all uppercase text-sm">
+                            Calculate
+                        </button>
+                    </div>
+
+                    <div id="fitResultBox" class="hidden p-4 bg-darkCard border border-volt/30 rounded-xl space-y-1">
+                        <span class="text-xs text-gray-400 uppercase font-bold">Recommended Nike Size:</span>
+                        <p id="fitResultText" class="text-2xl font-display font-bold text-volt">US 9.0 (27.0 cm)</p>
+                    </div>
+                </div>
+
+                <div class="bg-darkCard p-6 rounded-2xl border border-gray-800 text-xs text-gray-300 space-y-3">
+                    <h4 class="font-bold text-volt text-sm uppercase"><i class="fa-solid fa-lightbulb"></i> Superfly Fit Advice:</h4>
+                    <p>• The Mercurial Superfly 11 Elite features a snug, second-skin fit for zero speed distraction.</p>
+                    <p>• If you have wider feet, we recommend ordering <strong>half a size larger (0.5 US size up)</strong> for optimal comfort during long matches.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-20 bg-obsidian">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-volt text-xs font-bold tracking-widest uppercase bg-volt/10 px-3 py-1 rounded-full border border-volt/20">Verified Buyers</span>
+                <h2 class="font-display text-5xl font-black uppercase text-white mt-2">Customer Reviews</h2>
+                <div class="flex justify-center items-center gap-2 mt-2">
+                    <div class="text-volt text-lg">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-white font-bold">4.9 / 5.0</span>
+                    <span class="text-gray-500 text-sm">(128 Verified Ratings)</span>
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-3 mb-8 text-xs font-bold uppercase">
+                <button onclick="filterReviews('all', this)" class="rev-btn px-4 py-2 bg-volt text-black rounded-full">All Reviews</button>
+                <button onclick="filterReviews(5, this)" class="rev-btn px-4 py-2 bg-darkCard text-gray-300 hover:text-white rounded-full border border-gray-800">5 Stars</button>
+                <button onclick="filterReviews(4, this)" class="rev-btn px-4 py-2 bg-darkCard text-gray-300 hover:text-white rounded-full border border-gray-800">4 Stars</button>
+            </div>
+
+            <div id="reviewsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 bg-darkCard border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-neonCyan text-xs font-bold tracking-widest uppercase bg-neonCyan/10 px-3 py-1 rounded-full border border-neonCyan/20">Got Questions?</span>
+                <h2 class="font-display text-5xl font-black uppercase text-white mt-2">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4" id="faqAccordion">
+                <div class="bg-obsidian border border-gray-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 font-bold uppercase text-white flex justify-between items-center hover:text-volt transition-colors">
+                        <span>Are these cleats 100% Authentic Nike Products?</span>
+                        <i class="fa-solid fa-chevron-down text-volt transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-gray-900 pt-3">
+                        Yes, absolutely. All footwear sold by Daal Khor (by Omar Noor) is sourced directly from verified authorized Nike distributors with full original packaging and warranty guarantees.
+                    </div>
+                </div>
+
+                <div class="bg-obsidian border border-gray-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 font-bold uppercase text-white flex justify-between items-center hover:text-volt transition-colors">
+                        <span>What is the delivery timeline for UAE & GCC orders?</span>
+                        <i class="fa-solid fa-chevron-down text-volt transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-gray-900 pt-3">
+                        Orders placed within Dubai, Abu Dhabi, and Ajman are delivered within 24 hours. GCC international shipping typically takes 2-4 business days via courier tracking.
+                    </div>
+                </div>
+
+                <div class="bg-obsidian border border-gray-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 font-bold uppercase text-white flex justify-between items-center hover:text-volt transition-colors">
+                        <span>Can I exchange sizes if the boot does not fit?</span>
+                        <i class="fa-solid fa-chevron-down text-volt transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-gray-900 pt-3">
+                        Yes! We offer a hassle-free 14-day return and size exchange policy provided the boots are unworn on pitch and in original box condition.
+                    </div>
+                </div>
+
+                <div class="bg-obsidian border border-gray-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 font-bold uppercase text-white flex justify-between items-center hover:text-volt transition-colors">
+                        <span>How do I contact customer care for inquiries?</span>
+                        <i class="fa-solid fa-chevron-down text-volt transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-gray-900 pt-3">
+                        You can navigate directly to our dedicated contact page by clicking any "Contact Us" tab or button, or visiting <a href="contact.html" class="text-volt underline font-bold">contact.html</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-obsidian border-t border-gray-800 pt-16 pb-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-4 md:col-span-2">
+                    <div class="flex items-center gap-3">
+                        <img src="https://images.crowdspring.com/blog/wp-content/uploads/2023/11/16175527/nike-logo.png" 
+                             alt="Nike Logo" class="h-8 w-auto object-contain">
+                        <span class="font-display text-3xl font-bold uppercase text-white">DAAL KHOR</span>
+                    </div>
+                    <p class="text-xs text-gray-400 max-w-sm leading-relaxed">
+                        Curated performance football footwear by Omar Noor. Delivering elite soccer equipment to athletes across the region with fast shipping and authentic guarantees.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase text-volt tracking-widest mb-4">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs font-semibold text-gray-400 uppercase">
+                        <li><a href="#overview" class="hover:text-white transition-colors">Overview</a></li>
+                        <li><a href="#studio360" class="hover:text-white transition-colors">360° Studio</a></li>
+                        <li><a href="#techspecs" class="hover:text-white transition-colors">Tech Specs</a></li>
+                        <li><a href="#speedlab" class="hover:text-white transition-colors">Speed Lab</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase text-volt tracking-widest mb-4">Support & Contact</h4>
+                    <p class="text-xs text-gray-400 mb-4">Have questions regarding your order or fit preference?</p>
+                    <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-3 bg-darkCard hover:bg-volt hover:text-black border border-volt/50 font-bold text-xs uppercase rounded-xl transition-all shadow-lg">
+                        <i class="fa-solid fa-paper-plane"></i> Contact Support Tab
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800/80 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+                <p class="font-medium tracking-wide">
+                    Copyright Reserved By Muhammad Yasem 2026©
+                </p>
+                <div class="flex space-x-6">
+                    <a href="contact.html" class="hover:text-volt transition-colors">Contact Us</a>
+                    <span>•</span>
+                    <a href="#overview" class="hover:text-volt transition-colors">Terms of Sale</a>
+                    <span>•</span>
+                    <a href="#overview" class="hover:text-volt transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-0 left-0 right-0 bg-obsidian/95 backdrop-blur-lg border-t border-volt/30 py-3.5 px-4 z-50 shadow-[0_-10px_30px_rgba(0,0,0,0.8)]">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+            <div class="flex items-center space-x-4">
+                <img src="https://stepsarab.com/cdn/shop/files/NK_NKIO8219_900_198729677327_12.jpg?v=1789496346&width=713" 
+                     alt="Product Thumbnail" class="w-10 h-10 object-contain bg-darkCard rounded-lg p-0.5 hidden sm:block">
+                <div>
+                    <h4 class="font-display text-xl font-bold uppercase text-white leading-none">Superfly 11 Elite</h4>
+                    <span class="text-[10px] text-gray-400 font-mono hidden sm:inline">Official Colorway: Multi/Volt</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="text-right">
+                    <span class="text-[10px] text-gray-400 uppercase font-bold block">Total Price</span>
+                    <span class="font-display text-2xl sm:text-3xl font-black text-volt leading-none">1,029 AED</span>
+                </div>
+                <a href="https://www.nike.ae/en/mercurial-superfly-11-elite-firm-ground-low-top-soccer-cleats/NKIO8219-900.html?srsltid=AU7gw4WJlu-sl6w27dr-p2f6ypYjBt9-Hpq6iJ6PTkPiBkze7YHIqlDy" 
+                   target="_blank" 
+                   class="py-3 px-6 sm:px-8 bg-gradient-to-r from-volt to-neonOrange text-black font-extrabold text-sm sm:text-base rounded-xl hover:shadow-[0_0_20px_rgba(224,255,0,0.6)] hover:scale-105 active:scale-95 transition-all uppercase tracking-wider flex items-center gap-2">
+                    BUY NOW <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightboxModal" class="fixed inset-0 bg-black/90 backdrop-blur-xl z-[100] hidden flex flex-col items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-volt p-2">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="lightboxImg" class="max-h-[80vh] max-w-[90vw] object-contain rounded-2xl drop-shadow-[0_0_50px_rgba(224,255,0,0.2)]">
+        <p id="lightboxCaption" class="text-gray-400 mt-4 font-mono text-sm uppercase"></p>
+    </div>
+
+    <script>
+        const allProductImages = [
+            { url: "https://stepsarab.com/cdn/shop/files/NK_NKIO8219_900_198729677327_12.jpg?v=1789496346&width=713", cat: "angles", title: "Primary Profile View" },
+            { url: "https://stepsarab.com/cdn/shop/files/NK_NKIO8219_900_198729677327_11.jpg?v=1789496346&width=713", cat: "flyknit", title: "Flyknit & Gripknit Upper Close-up" },
+            { url: "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwb8808240/nk/NK_/N/K/I/O/8/2/NK_NKIO8219_900_198729677327_1.jpg?sw=700&sh=700&sm=fit&q=100&strip=false", cat: "angles", title: "Side Profile Perspective" },
+            { url: "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwea74ac12/nk/NK_/N/K/I/O/8/2/NK_NKIO8219_900_198729677327_2.jpg?sw=700&sh=700&sm=fit&q=100&strip=false", cat: "angles", title: "Medial Lateral Angle" },
+            { url: "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw545c5b93/nk/NK_/N/K/I/O/8/2/NK_NKIO8219_900_198729677327_3.jpg?sw=700&sh=700&sm=fit&q=100&strip=false", cat: "outsole", title: "Firm Ground Outsole Stud Plate" },
+            { url: "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwbd79094d/nk/NK_/N/K/I/O/8/2/NK_NKIO8219_900_198729677327_4.jpg?sw=700&sh=700&sm=fit&q=100&strip=false", cat: "flyknit", title: "Toe Box Texture Detail" },
+            { url: "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw73042d0e/nk/NK_/N/K/I/O/8/2/NK_NKIO8219_900_198729677327_5.jpg?sw=700&sh=700&sm=fit&q=100&strip=false", cat: "angles", title: "Heel Counter Profile" },
+            { url: "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw175a3e41/nk/NK_/N/K/I/O/8/2/NK_NKIO8219_900_198729677327_6.jpg?sw=700&sh=700&sm=fit&q=100&strip=false", cat: "outsole", title: "Air Zoom Articulated Sole" },
+            { url: "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw177051ee/nk/NK_/N/K/I/O/8/2/NK_NKIO8219_900_198729677327_7.jpg?sw=700&sh=700&sm=fit&q=100&strip=false", cat: "flyknit", title: "Dynamic Fit Collar" },
+            { url: "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwece72ee2/nk/NK_/N/K/I/O/8/2/NK_NKIO8219_900_198729677327_8.jpg?sw=700&sh=700&sm=fit&q=100&strip=false", cat: "angles", title: "Top Down View" },
+            { url: "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw98f6d933/nk/NK_/N/K/I/O/8/2/NK_NKIO8219_900_198729677327_9.jpg?sw=700&sh=700&sm=fit&q=100&strip=false", cat: "outsole", title: "Traction Wave Stud Pattern" },
+            { url: "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwc6a8196f/nk/NK_/N/K/I/O/8/2/NK_NKIO8219_900_198729677327_10.jpg?sw=700&sh=700&sm=fit&q=100&strip=false", cat: "angles", title: "Pair Symmetry Angle" }
+        ];
+
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        mobileBtn.addEventListener('click', () => { mobileNav.classList.toggle('hidden'); });
+
+        function switchHeroImg(src) {
+            document.getElementById('mainHeroImg').src = src;
+            document.querySelectorAll('.hero-thumb').forEach(thumb => {
+                if (thumb.src === src) {
+                    thumb.classList.add('border-volt');
+                    thumb.classList.remove('border-transparent', 'opacity-70');
+                } else {
+                    thumb.classList.remove('border-volt');
+                    thumb.classList.add('border-transparent', 'opacity-70');
+                }
+            });
+        }
+
+        function selectHeroSize(btn, size) {
+            document.querySelectorAll('#heroSizeGrid button').forEach(b => {
+                b.className = "size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all";
+            });
+            btn.className = "size-btn py-2 bg-volt text-black border border-volt font-bold rounded-lg shadow-lg";
+            document.getElementById('selectedSizeText').innerHTML = `Selected Size: <span class="text-volt font-bold">${size}</span> (Ready for Express Shipping)`;
+        }
+
+        let current360Index = 0;
+        function update360Viewer(idx) {
+            current360Index = (idx + 12) % 12;
+            document.getElementById('viewer360Img').src = allProductImages[current360Index].url;
+            document.getElementById('angleIndex').innerText = current360Index + 1;
+            document.getElementById('studio360Slider').value = current360Index;
+
+            document.querySelectorAll('.thumb-360-item').forEach((item, i) => {
+                if (i === current360Index) {
+                    item.className = "thumb-360-item border-2 border-volt rounded-lg overflow-hidden cursor-pointer";
+                } else {
+                    item.className = "thumb-360-item border border-gray-800 rounded-lg overflow-hidden cursor-pointer opacity-50 hover:opacity-100";
+                }
+            });
+        }
+
+        function rotate360(step) { update360Viewer(current360Index + step); }
+        function update360FromSlider(val) { update360Viewer(parseInt(val)); }
+
+        const thumb360Grid = document.getElementById('thumb360Grid');
+        allProductImages.forEach((imgObj, idx) => {
+            const thumb = document.createElement('div');
+            thumb.className = idx === 0 ? 
+                "thumb-360-item border-2 border-volt rounded-lg overflow-hidden cursor-pointer" : 
+                "thumb-360-item border border-gray-800 rounded-lg overflow-hidden cursor-pointer opacity-50 hover:opacity-100";
+            thumb.innerHTML = `<img src="${imgObj.url}" class="w-full h-10 object-cover" alt="Angle ${idx+1}">`;
+            thumb.onclick = () => update360Viewer(idx);
+            thumb360Grid.appendChild(thumb);
+        });
+
+        function calculateSpeedMetrics() {
+            const speed = parseFloat(document.getElementById('speedInput').value);
+            const pitchFactor = parseFloat(document.getElementById('pitchInput').value);
+
+            document.getElementById('speedVal').innerText = `${speed} km/h`;
+
+            const eReturn = (80 + (speed * 0.28) * pitchFactor).toFixed(1);
+            const sprintBoost = (-0.10 - (speed * 0.0015) * pitchFactor).toFixed(2);
+            const responsiveness = Math.min(99, Math.round((speed / 38) * 100));
+
+            document.getElementById('energyReturnMetric').innerText = `${eReturn}%`;
+            document.getElementById('sprintTimeMetric').innerText = `${sprintBoost}s`;
+            document.getElementById('responsivenessPercent').innerText = `${responsiveness}%`;
+            document.getElementById('responsivenessBar').style.width = `${responsiveness}%`;
+        }
+
+        function renderGallery(filter = 'all') {
+            const grid = document.getElementById('galleryGrid');
+            grid.innerHTML = '';
+
+            allProductImages.forEach((imgObj, i) => {
+                if (filter === 'all' || imgObj.cat === filter) {
+                    const card = document.createElement('div');
+                    card.className = "group relative bg-darkCard border border-gray-800 rounded-2xl p-3 overflow-hidden cursor-pointer hover:border-volt/50 transition-all";
+                    card.onclick = () => openLightbox(imgObj.url, imgObj.title);
+                    
+                    card.innerHTML = `
+                        <div class="aspect-square w-full flex items-center justify-center overflow-hidden rounded-xl bg-obsidian">
+                            <img src="${imgObj.url}" alt="${imgObj.title}" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="mt-3 flex items-center justify-between text-xs">
+                            <span class="font-bold text-gray-200 truncate">${imgObj.title}</span>
+                            <i class="fa-solid fa-expand text-volt opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                }
+            });
+        }
+
+        function filterGallery(cat, btn) {
+            document.querySelectorAll('.gal-filter-btn').forEach(b => {
+                b.className = "gal-filter-btn px-5 py-2 rounded-full text-xs font-bold uppercase bg-darkCard hover:bg-gray-800 text-gray-300 border border-gray-800 transition-all";
+            });
+            btn.className = "gal-filter-btn px-5 py-2 rounded-full text-xs font-bold uppercase bg-volt text-black transition-all";
+            renderGallery(cat);
+        }
+
+        function openLightbox(url, caption) {
+            document.getElementById('lightboxImg').src = url;
+            document.getElementById('lightboxCaption').innerText = caption;
+            document.getElementById('lightboxModal').classList.remove('hidden');
+        }
+
+        function closeLightbox() { document.getElementById('lightboxModal').classList.add('hidden'); }
+
+        function calculateFitSize() {
+            const cm = parseFloat(document.getElementById('footLengthInput').value);
+            const resultBox = document.getElementById('fitResultBox');
+            const resultText = document.getElementById('fitResultText');
+
+            if (isNaN(cm) || cm < 20 || cm > 35) {
+                resultText.innerText = "Please enter valid CM (20 - 35)";
+                resultBox.classList.remove('hidden');
+                return;
+            }
+
+            let usSize = "US 9.0";
+            if (cm <= 24.5) usSize = "US 7.0";
+            else if (cm <= 25.5) usSize = "US 8.0";
+            else if (cm <= 26.5) usSize = "US 8.5";
+            else if (cm <= 27.0) usSize = "US 9.0";
+            else if (cm <= 28.0) usSize = "US 10.0";
+            else if (cm <= 29.0) usSize = "US 11.0";
+            else usSize = "US 12.0+";
+
+            resultText.innerText = `${usSize} (${cm} cm)`;
+            resultBox.classList.remove('hidden');
+        }
+
+        const reviewsData = [
+            { name: "Hamdan A.", rating: 5, date: "Verified UAE Purchaser", text: "The acceleration out of turns is insane! The Air Zoom unit underfoot makes a massive difference compared to my previous Superfly 9s." },
+            { name: "Zaid K.", rating: 5, date: "Verified Dubai Athlete", text: "Delivery by Daal Khor took less than 24 hours in Ajman. Boot fits snug and Gripknit upper controls the ball perfectly in wet conditions." },
+            { name: "Faris M.", rating: 4, date: "Verified Abu Dhabi Buyer", text: "Extremely light boot. Takes about 1 match to break in completely around the heel collar, but afterwards feels unbelievable." }
+        ];
+
+        function renderReviews(filterRating = 'all') {
+            const container = document.getElementById('reviewsGrid');
+            container.innerHTML = '';
+
+            reviewsData.forEach(rev => {
+                if (filterRating === 'all' || rev.rating === filterRating) {
+                    const card = document.createElement('div');
+                    card.className = "bg-darkCard border border-gray-800 p-6 rounded-2xl flex flex-col justify-between";
+                    
+                    let stars = '';
+                    for (let i = 0; i < rev.rating; i++) stars += '<i class="fa-solid fa-star text-volt text-xs"></i> ';
+
+                    card.innerHTML = `
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <div>${stars}</div>
+                                <span class="text-[10px] text-gray-500 font-mono">${rev.date}</span>
+                            </div>
+                            <p class="text-sm text-gray-300 italic">"${rev.text}"</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-800 flex items-center justify-between">
+                            <span class="font-bold text-white text-sm">${rev.name}</span>
+                            <span class="text-xs text-green-400 font-semibold"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                }
+            });
+        }
+
+        function filterReviews(rating, btn) {
+            document.querySelectorAll('.rev-btn').forEach(b => {
+                b.className = "rev-btn px-4 py-2 bg-darkCard text-gray-300 hover:text-white rounded-full border border-gray-800";
+            });
+            btn.className = "rev-btn px-4 py-2 bg-volt text-black rounded-full font-bold";
+            renderReviews(rating);
+        }
+
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        window.onload = function() {
+            renderGallery('all');
+            renderReviews('all');
+            calculateSpeedMetrics();
+        }
+    </script>
+</body>
+</html>
