@@ -236,7 +236,7 @@
 
         <!-- Store Badge -->
         <div class="glass-card p-6 rounded-3xl border border-neonOrange/30 bg-gradient-to-br from-neonOrange/10 via-transparent to-neonPink/10 text-center">
-          <p class="text-xs font-black uppercase text-gray-300 tracking-wider">Curated Store Experience</p>
+          <p class="text-xs font-black uppercase text-gray-300 tracking-wider">Created Store Experience</p>
           <p class="text-xl font-black uppercase text-white mt-1">DAAL KHOR <span class="text-neonVolt">EXECUTIVE</span></p>
           <span class="text-[11px] text-gray-400 block mt-1 font-semibold">Brought to you by Omar Noor</span>
         </div>
@@ -334,7 +334,7 @@
     const statusBox = document.getElementById('formStatusBox');
 
     // Email regex validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+\$/;
 
     // Real-time input handlers
     emailInput.addEventListener('input', () => {
@@ -404,7 +404,7 @@
 
         if (response.ok) {
           showStatus(
-            '✅ SUCCESS! Your message has been sent to Daal Khor. We will reply to your email shortly.',
+            ' SUCCESS! Your message has been sent to Daal Khor. We will reply to your email shortly.',
             'success'
           );
           form.reset();
@@ -414,15 +414,15 @@
           const data = await response.json();
           if (Object.hasOwn(data, 'errors')) {
             showStatus(
-              '❌ SUBMISSION ERROR: ' + data.errors.map(err => err.message).join(', '),
+              ' SUBMISSION ERROR: ' + data.errors.map(err => err.message).join(', '),
               'error'
             );
           } else {
-            showStatus('❌ OOPS! An error occurred while sending your message. Please try again.', 'error');
+            showStatus(' OOPS! An error occurred while sending your message. Please try again.', 'error');
           }
         }
       } catch (err) {
-        showStatus('❌ CONNECTIVITY ERROR: Please check your internet connection.', 'error');
+        showStatus(' CONNECTIVITY ERROR: Please check your internet connection.', 'error');
       } finally {
         submitBtn.disabled = false;
         submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
@@ -454,7 +454,7 @@
         <span class="text-lg font-black uppercase tracking-widest text-white">DAAL KHOR</span>
       </div>
       <p class="text-xs text-gray-400 font-medium">
-        Curated by <strong class="text-neonVolt">Omar Noor</strong>
+        Created by <strong class="text-neonVolt">Omar Noor</strong>
       </p>
       <div class="text-xs font-bold uppercase tracking-widest text-gray-400 pt-4 border-t border-gray-900/80">
         Copyright Reserved By Muhammad Yasem 2026©
