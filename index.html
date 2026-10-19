@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daal Khor (by Omar Noor and Muhammad Yasem) - LightSpeed Black</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        volt: '#E0FF00',
+                        neonOrange: '#FF4D00',
+                        neonCyan: '#00F2FE',
+                        obsidian: '#0B0F19',
+                        darkCard: '#131A29',
+                        glowBorder: '#1F293D'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Teko', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #0B0F19;
+            color: #F3F4F6;
+            overflow-x: hidden;
+        }
+        .glow-volt {
+            box-shadow: 0 0 25px rgba(224, 255, 0, 0.35);
+        }
+        .glow-text-volt {
+            text-shadow: 0 0 12px rgba(224, 255, 0, 0.6);
+        }
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(224, 255, 0, 0.1) 1px, transparent 0);
+            background-size: 30px 30px;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0B0F19; }
+        ::-webkit-scrollbar-thumb { background: #1F293D; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #E0FF00; }
+    </style>
+</head>
+<body class="bg-obsidian text-gray-100 font-sans selection:bg-volt selection:text-black">
+
+    <header class="sticky top-0 z-50 bg-obsidian/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <a href="#" class="flex items-center gap-3 group">
+                    <img src="https://i.pinimg.com/736x/7d/d7/91/7dd7915ced05d294c2934b06c4b168e4.jpg" 
+                         alt="Logo" 
+                         class="h-10 w-auto object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] group-hover:scale-105 transition-transform"
+                         onerror="this.src='https://placehold.co/100x50/000000/FFFFFF?text=LOGO'">
+                    <div class="flex flex-col">
+                        <span class="font-display text-3xl font-bold tracking-wider text-white uppercase leading-none group-hover:text-volt transition-colors">
+                            DAAL KHOR
+                        </span>
+                        <span class="text-[9px] tracking-widest text-volt uppercase font-semibold">
+                            BY OMAR NOOR & MUHAMMAD YASEM
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold tracking-wide uppercase">
+                <a href="#overview" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">Overview</a>
+                <a href="#video-showcase" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">Video</a>
+                <a href="#studio360" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">360° Studio</a>
+                <a href="#techspecs" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">Tech Specs</a>
+                <a href="#speedlab" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">Speed Lab</a>
+                <a href="#gallery" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">Gallery</a>
+                <a href="#reviews" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">Reviews</a>
+                <a href="#faq" class="hover:text-volt transition-colors py-1 border-b-2 border-transparent hover:border-volt">FAQ</a>
+                <a href="contact.html" class="px-4 py-2 bg-gradient-to-r from-volt to-neonCyan text-black font-extrabold rounded-full hover:shadow-[0_0_15px_rgba(224,255,0,0.8)] transition-all transform hover:-translate-y-0.5">
+                    CONTACT US <i class="fa-solid font-bold fa-arrow-right ml-1"></i>
+                </a>
+            </nav>
+
+            <button id="mobileMenuBtn" class="lg:hidden text-2xl text-volt focus:outline-none p-2">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobileNav" class="hidden lg:hidden bg-darkCard border-b border-gray-800 px-6 py-4 space-y-3 font-semibold uppercase text-sm">
+            <a href="#overview" class="block hover:text-volt py-1">Overview</a>
+            <a href="#video-showcase" class="block hover:text-volt py-1">Video</a>
+            <a href="#studio360" class="block hover:text-volt py-1">360° Studio</a>
+            <a href="#techspecs" class="block hover:text-volt py-1">Tech Specs</a>
+            <a href="#speedlab" class="block hover:text-volt py-1">Speed Lab</a>
+            <a href="#gallery" class="block hover:text-volt py-1">Gallery</a>
+            <a href="#reviews" class="block hover:text-volt py-1">Reviews</a>
+            <a href="#faq" class="block hover:text-volt py-1">FAQ</a>
+            <a href="contact.html" class="block text-center py-2 bg-volt text-black font-bold rounded-lg mt-2">
+                CONTACT US <i class="fa-solid fa-envelope ml-1"></i>
+            </a>
+        </div>
+    </header>
+
+    <section id="overview" class="relative pt-10 pb-20 overflow-hidden bg-grid-pattern">
+        <div class="absolute top-1/4 left-10 w-96 h-96 bg-volt/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-neonOrange/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6 z-10">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 bg-volt/10 border border-volt/30 rounded-full text-volt text-xs font-bold tracking-widest uppercase">
+                        <span class="w-2 h-2 rounded-full bg-volt animate-ping"></span>
+                        <span>Official Release • Daal Khor Exclusive</span>
+                    </div>
+
+                    <h1 class="font-display text-6xl sm:text-7xl font-extrabold uppercase tracking-tight text-white leading-none">
+                        LIGHTSPEED <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-volt via-white to-neonCyan glow-text-volt">
+                            BLACK
+                        </span>
+                    </h1>
+
+                    <p class="text-gray-400 text-base sm:text-lg leading-relaxed">
+                        Dominate the urban grid and street circuits with the LightSpeed Black. Engineered with multi-window air units, moisture-wicking ergonomic arch support, and breathable mesh paneling designed for ultimate day-long endurance and responsive energy return.
+                    </p>
+
+                    <div class="flex items-baseline gap-4 py-2">
+                        <span class="font-display text-5xl font-black text-volt tracking-tight">63 AED</span>
+                        <span class="text-gray-500 line-through text-lg font-semibold">120 AED</span>
+                        <span class="px-2 py-0.5 bg-neonOrange/20 border border-neonOrange text-neonOrange text-xs font-bold rounded">SAVE 47%</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="font-bold uppercase text-gray-300">Select US Size:</span>
+                            <a href="#size-guide" class="text-xs text-volt hover:underline flex items-center gap-1">
+                                <i class="fa-solid fa-ruler-horizontal"></i> Fitting Calculator
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-5 gap-2" id="heroSizeGrid">
+                            <button onclick="selectHeroSize(this, 'US 7.0')" class="size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all">7.0</button>
+                            <button onclick="selectHeroSize(this, 'US 8.0')" class="size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all">8.0</button>
+                            <button onclick="selectHeroSize(this, 'US 9.0')" class="size-btn py-2 bg-volt text-black border border-volt font-bold rounded-lg shadow-lg">9.0</button>
+                            <button onclick="selectHeroSize(this, 'US 10.0')" class="size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all">10.0</button>
+                            <button onclick="selectHeroSize(this, 'US 11.0')" class="size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all">11.0</button>
+                            <button onclick="selectHeroSize(this, 'US 11.5')" class="size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all">11.5</button>
+                            <button onclick="selectHeroSize(this, 'US 12.0')" class="size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all">12.0</button>
+                            <button onclick="selectHeroSize(this, 'US 12.5')" class="size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all">12.5</button>
+                        </div>
+                        <p id="selectedSizeText" class="text-xs text-gray-400">Selected Size: <span class="text-volt font-bold">US 9.0</span> (Ready for Express Shipping)</p>
+                    </div>
+
+                    <div class="pt-4 space-y-4">
+                        <div class="flex items-center space-x-3 text-xs text-green-400 font-semibold bg-green-950/40 border border-green-800/50 p-2.5 rounded-lg">
+                            <i class="fa-solid fa-circle-check text-green-400 text-sm"></i>
+                            <span>In Stock • Ships within 24 Hours in UAE & GCC</span>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#checkout" 
+                               class="flex-1 py-4 px-8 bg-gradient-to-r from-volt via-yellow-400 to-neonOrange text-black font-black text-center text-lg rounded-xl shadow-[0_0_30px_rgba(224,255,0,0.4)] hover:shadow-[0_0_40px_rgba(224,255,0,0.7)] hover:scale-[1.02] active:scale-95 transition-all uppercase tracking-wider flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cart-shopping text-xl"></i> Buy Now • 63 AED
+                            </a>
+                            <a href="#studio360" class="py-4 px-6 bg-darkCard hover:bg-gray-800 border border-gray-700 text-gray-200 font-bold rounded-xl text-center transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cube"></i> View 360°
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col items-center justify-center relative">
+                    <div class="relative w-full aspect-square max-w-xl bg-gradient-to-b from-darkCard/80 to-obsidian border border-glowBorder rounded-3xl p-6 flex items-center justify-center group overflow-hidden shadow-2xl">
+                        <div class="absolute top-4 left-4 bg-obsidian/80 backdrop-blur-md px-3 py-1.5 border border-volt/30 rounded-lg flex items-center gap-2 text-xs font-bold text-volt z-10">
+                            <i class="fa-solid fa-bolt"></i> Multi-Window Air Units
+                        </div>
+
+                        <img id="mainHeroImg" 
+                             src="https://i.pinimg.com/736x/c2/59/f6/c259f6e86b29f94a593ef326716bd933.jpg" 
+                             alt="LightSpeed Black" 
+                             class="max-h-[85%] w-auto object-contain transition-all duration-500 transform group-hover:scale-105 drop-shadow-[0_20px_35px_rgba(0,0,0,0.8)]"
+                             onerror="this.src='https://placehold.co/600x600/131A29/FFFFFF?text=LightSpeed+Black'">
+
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 p-2 bg-obsidian/90 backdrop-blur-md rounded-2xl border border-gray-800 max-w-[95%] overflow-x-auto scrollbar-none">
+                            <img src="https://i.pinimg.com/736x/c2/59/f6/c259f6e86b29f94a593ef326716bd933.jpg" 
+                                 onclick="switchHeroImg(this.src)" 
+                                 class="hero-thumb w-12 h-12 rounded-lg object-cover border-2 border-volt cursor-pointer hover:opacity-100 transition-all">
+                            <img src="https://i.pinimg.com/736x/ab/71/23/ab7123aaf680f3380c5c30259a3d92ff.jpg" 
+                                 onclick="switchHeroImg(this.src)" 
+                                 class="hero-thumb w-12 h-12 rounded-lg object-cover border-2 border-transparent hover:border-volt opacity-70 hover:opacity-100 cursor-pointer transition-all">
+                            <img src="https://i.pinimg.com/736x/38/8d/65/388d6516c53c0ae63881718b7a390408.jpg" 
+                                 onclick="switchHeroImg(this.src)" 
+                                 class="hero-thumb w-12 h-12 rounded-lg object-cover border-2 border-transparent hover:border-volt opacity-70 hover:opacity-100 cursor-pointer transition-all">
+                            <img src="https://i.pinimg.com/736x/15/f8/3c/15f83c8627d3f9fcb1083976a1186f04.jpg" 
+                                 onclick="switchHeroImg(this.src)" 
+                                 class="hero-thumb w-12 h-12 rounded-lg object-cover border-2 border-transparent hover:border-volt opacity-70 hover:opacity-100 cursor-pointer transition-all">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO SHOWCASE SECTION -->
+    <section id="video-showcase" class="py-20 bg-darkCard border-y border-gray-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-neonCyan text-xs font-bold tracking-widest uppercase bg-neonCyan/10 px-3 py-1 rounded-full border border-neonCyan/20">Cinematic Reveal</span>
+                <h2 class="font-display text-5xl font-black uppercase text-white mt-2">LightSpeed Black Motion Showcase</h2>
+                <p class="text-gray-400 text-sm sm:text-base mt-2">Experience the silhouette, engineering breakdown, and supreme finish in motion.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-obsidian border border-gray-800 rounded-3xl p-4 sm:p-6 shadow-2xl relative overflow-hidden">
+                <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-black flex items-center justify-center border border-gray-800">
+                    <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                        <source src="https://raw.githubusercontent.com/muhammadyasam13/Daal-Khor/main/VIDEO.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian/60 via-transparent to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-4 left-4 bg-obsidian/80 backdrop-blur-md px-3 py-1.5 border border-volt/30 rounded-lg flex items-center gap-2 text-xs font-bold text-volt">
+                        <i class="fa-solid fa-play"></i> LightSpeed Black Cinematic Overview
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="studio360" class="py-20 bg-obsidian border-b border-gray-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-volt text-xs font-bold tracking-widest uppercase bg-volt/10 px-3 py-1 rounded-full border border-volt/20">Full Angle Exploration</span>
+                <h2 class="font-display text-5xl font-black uppercase text-white mt-2">Interactive 360° Studio Viewer</h2>
+                <p class="text-gray-400 text-sm sm:text-base mt-2">Inspect the layered durability, custom lockdown lacing, and multi-window air units from all perspectives.</p>
+            </div>
+
+            <div class="bg-darkCard border border-gray-800 rounded-3xl p-6 sm:p-10 shadow-2xl flex flex-col items-center">
+                <div class="relative w-full max-w-2xl aspect-[4/3] flex items-center justify-center bg-obsidian/50 rounded-2xl p-4 overflow-hidden group">
+                    <img id="viewer360Img" 
+                         src="https://i.pinimg.com/736x/c2/59/f6/c259f6e86b29f94a593ef326716bd933.jpg" 
+                         alt="360 View" 
+                         class="max-h-full max-w-full object-contain transition-all duration-300 transform group-hover:scale-105">
+                    <div class="absolute bottom-4 right-4 bg-obsidian/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono text-volt border border-volt/30">
+                        Angle: <span id="angleIndex">1</span> / 7
+                    </div>
+                </div>
+
+                <div class="w-full max-w-xl mt-8 space-y-4">
+                    <div class="flex items-center justify-between text-xs font-bold text-gray-400 uppercase">
+                        <button onclick="rotate360(-1)" class="p-2 bg-obsidian hover:bg-volt hover:text-black rounded-lg transition-colors flex items-center gap-1">
+                            <i class="fa-solid fa-chevron-left"></i> Previous
+                        </button>
+                        <span>Rotate 360° View</span>
+                        <button onclick="rotate360(1)" class="p-2 bg-obsidian hover:bg-volt hover:text-black rounded-lg transition-colors flex items-center gap-1">
+                            Next <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <input type="range" id="studio360Slider" min="0" max="6" value="0" step="1" 
+                           oninput="update360FromSlider(this.value)" 
+                           class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-volt">
+                </div>
+
+                <div class="w-full mt-10">
+                    <h3 class="text-xs font-bold text-gray-400 uppercase mb-4 text-center">Click Angle Thumbnail:</h3>
+                    <div class="grid grid-cols-4 sm:grid-cols-7 gap-2" id="thumb360Grid"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="techspecs" class="py-20 bg-obsidian relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-neonCyan text-xs font-bold tracking-widest uppercase bg-neonCyan/10 px-3 py-1 rounded-full border border-neonCyan/20">Engineering & Precision</span>
+                <h2 class="font-display text-5xl font-black uppercase text-white mt-2">Deep Tech Breakdown</h2>
+                <p class="text-gray-400 text-base">Explore the breakthrough features that define the LightSpeed Black performance profile.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-darkCard border border-gray-800 hover:border-volt/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-volt/10 text-volt flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold uppercase text-white mb-2">Breathable Mesh Paneling</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Engineered upper mesh delivers airflow ventilation to keep your feet cool and dry under high-intensity movement.
+                    </p>
+                </div>
+
+                <div class="bg-darkCard border border-gray-800 hover:border-neonCyan/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-neonCyan/10 text-neonCyan flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-shoe-prints"></i>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold uppercase text-white mb-2">Ergonomic Arch Support</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Contoured footbed adapts to your arch shape, minimizing fatigue and providing ultra-soft cushioning with every step.
+                    </p>
+                </div>
+
+                <div class="bg-darkCard border border-gray-800 hover:border-neonOrange/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-neonOrange/10 text-neonOrange flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-shield"></i>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold uppercase text-white mb-2">Layered Durability</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Reinforced overlay panels and custom lockdown lacing secure your midfoot for maximum stability and lateral support.
+                    </p>
+                </div>
+
+                <div class="bg-darkCard border border-gray-800 hover:border-purple-500/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold uppercase text-white mb-2">Multi-Window Air Units</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Visible air chambers absorb high impacts and offer responsive energy return, propelling you forward effortlessly.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-darkCard border border-gray-800 rounded-3xl p-6 sm:p-8">
+                <h3 class="font-display text-3xl font-bold uppercase text-white mb-6">Technical Specifications Sheet</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm text-gray-300">
+                        <tbody class="divide-y divide-gray-800">
+                            <tr>
+                                <td class="py-3 font-bold text-gray-400 w-1/3">Weight (US 9)</td>
+                                <td class="py-3 text-volt font-bold">340 grams (All-Day Comfort)</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-bold text-gray-400">Upper Construction</td>
+                                <td class="py-3">Breathable Mesh with Layered Synthetic Durability Overlays</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-bold text-gray-400">Cushioning Tech</td>
+                                <td class="py-3">Multi-Window Air Units + Moisture-Wicking Sockliner</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-bold text-gray-400">Model Style Code</td>
+                                <td class="py-3 font-mono text-neonCyan">LSB-2026-BLK</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-bold text-gray-400">Retail Distribution</td>
+                                <td class="py-3">Daal Khor Authorized Retail (Omar Noor & Muhammad Yasem)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="speedlab" class="py-20 bg-darkCard border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-neonOrange text-xs font-bold tracking-widest uppercase bg-neonOrange/10 px-3 py-1 rounded-full border border-neonOrange/20">Interactive Dynamics</span>
+                    <h2 class="font-display text-5xl font-black uppercase text-white leading-tight">Performance Simulator</h2>
+                    <p class="text-gray-400 text-base">
+                        Test how movement pace and surface traction calculate energy return, impact absorption, and daily wear stamina in real-time.
+                    </p>
+
+                    <div class="space-y-6 bg-obsidian p-6 rounded-2xl border border-gray-800">
+                        <div>
+                            <div class="flex justify-between text-xs font-bold uppercase mb-2">
+                                <span class="text-gray-300">Activity Pace Intensity</span>
+                                <span id="speedVal" class="text-volt font-mono text-base">High Output</span>
+                            </div>
+                            <input type="range" id="speedInput" min="1" max="5" value="4" step="1" 
+                                   oninput="calculateSpeedMetrics()" 
+                                   class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-volt">
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-bold uppercase mb-2">
+                                <span class="text-gray-300">Terrain Condition</span>
+                                <span id="pitchVal" class="text-neonCyan font-mono text-base">Urban Pavement / Track</span>
+                            </div>
+                            <select id="pitchInput" onchange="calculateSpeedMetrics()" class="w-full bg-darkCard border border-gray-700 text-white py-2 px-3 rounded-lg text-sm font-semibold focus:border-volt focus:outline-none">
+                                <option value="1.0">Urban Asphalt & Concrete</option>
+                                <option value="0.92">All-Weather Track Surface</option>
+                                <option value="1.05">Indoor Gym Flooring</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-obsidian border border-gray-800 rounded-3xl p-8 shadow-2xl relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-volt/10 rounded-full blur-2xl"></div>
+
+                    <h3 class="font-display text-3xl font-bold uppercase text-white mb-6 border-b border-gray-800 pb-4">Performance Metrics Calculation</h3>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-darkCard p-4 rounded-xl border border-gray-800 text-center">
+                            <span class="text-xs text-gray-400 font-bold uppercase">Impact Absorption</span>
+                            <p id="energyReturnMetric" class="font-display text-4xl font-extrabold text-volt mt-1">96.2%</p>
+                            <span class="text-[10px] text-gray-500">Multi-Window Air Cushion</span>
+                        </div>
+
+                        <div class="bg-darkCard p-4 rounded-xl border border-gray-800 text-center">
+                            <span class="text-xs text-gray-400 font-bold uppercase">Stamina Index</span>
+                            <p id="sprintTimeMetric" class="font-display text-4xl font-extrabold text-neonCyan mt-1">+4 hrs</p>
+                            <span class="text-[10px] text-gray-500">Extended Wear Comfort</span>
+                        </div>
+
+                        <div class="bg-darkCard p-4 rounded-xl border border-gray-800 text-center">
+                            <span class="text-xs text-gray-400 font-bold uppercase">Grip Rating</span>
+                            <p id="tractionMetric" class="font-display text-4xl font-extrabold text-neonOrange mt-1">9.9/10</p>
+                            <span class="text-[10px] text-gray-500">High-Abrasion Rubber</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs font-bold text-gray-400">
+                            <span>Overall Cushioning Efficiency</span>
+                            <span id="responsivenessPercent" class="text-volt">96%</span>
+                        </div>
+                        <div class="w-full h-3 bg-darkCard rounded-full overflow-hidden border border-gray-800">
+                            <div id="responsivenessBar" class="h-full bg-gradient-to-r from-volt to-neonOrange transition-all duration-500" style="width: 96%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-obsidian">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-volt text-xs font-bold tracking-widest uppercase bg-volt/10 px-3 py-1 rounded-full border border-volt/20">High Definition Media</span>
+                <h2 class="font-display text-5xl font-black uppercase text-white mt-2">Product Photo Gallery</h2>
+                <p class="text-gray-400 text-sm sm:text-base mt-2">Browse the official LightSpeed Black photo collection displaying every angle and detail.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
+                <div class="gallery-item bg-darkCard border border-gray-800 rounded-2xl overflow-hidden group">
+                    <div class="aspect-[4/3] overflow-hidden bg-black flex items-center justify-center p-4">
+                        <img src="https://i.pinimg.com/736x/c2/59/f6/c259f6e86b29f94a593ef326716bd933.jpg" alt="LightSpeed Black 1" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 border-t border-gray-800">
+                        <h4 class="font-display text-xl font-bold uppercase text-white">Side Profile Angle</h4>
+                        <p class="text-xs text-gray-400 mt-1">Sleek matte blackout finish with visible air chambers.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item bg-darkCard border border-gray-800 rounded-2xl overflow-hidden group">
+                    <div class="aspect-[4/3] overflow-hidden bg-black flex items-center justify-center p-4">
+                        <img src="https://i.pinimg.com/736x/ab/71/23/ab7123aaf680f3380c5c30259a3d92ff.jpg" alt="LightSpeed Black 2" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 border-t border-gray-800">
+                        <h4 class="font-display text-xl font-bold uppercase text-white">Anatomical Tech Breakdown</h4>
+                        <p class="text-xs text-gray-400 mt-1">Detailed layers showing mesh paneling and support structure.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item bg-darkCard border border-gray-800 rounded-2xl overflow-hidden group">
+                    <div class="aspect-[4/3] overflow-hidden bg-black flex items-center justify-center p-4">
+                        <img src="https://i.pinimg.com/736x/38/8d/65/388d6516c53c0ae63881718b7a390408.jpg" alt="LightSpeed Black 3" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 border-t border-gray-800">
+                        <h4 class="font-display text-xl font-bold uppercase text-white">Ergonomic Arch Insole</h4>
+                        <p class="text-xs text-gray-400 mt-1">Moisture-wicking custom arch support insert.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item bg-darkCard border border-gray-800 rounded-2xl overflow-hidden group">
+                    <div class="aspect-[4/3] overflow-hidden bg-black flex items-center justify-center p-4">
+                        <img src="https://i.pinimg.com/736x/15/f8/3c/15f83c8627d3f9fcb1083976a1186f04.jpg" alt="LightSpeed Black 4" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 border-t border-gray-800">
+                        <h4 class="font-display text-xl font-bold uppercase text-white">Flexibility & Cushioning</h4>
+                        <p class="text-xs text-gray-400 mt-1">Midsole flexibility testing for natural stride mechanics.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item bg-darkCard border border-gray-800 rounded-2xl overflow-hidden group">
+                    <div class="aspect-[4/3] overflow-hidden bg-black flex items-center justify-center p-4">
+                        <img src="https://i.pinimg.com/736x/59/4a/84/594a84244edde2da4009da9d3ca475f6.jpg" alt="LightSpeed Black 5" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 border-t border-gray-800">
+                        <h4 class="font-display text-xl font-bold uppercase text-white">Traction Outsole</h4>
+                        <p class="text-xs text-gray-400 mt-1">High-abrasion rubber tread with turf-style stud grip.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item bg-darkCard border border-gray-800 rounded-2xl overflow-hidden group">
+                    <div class="aspect-[4/3] overflow-hidden bg-black flex items-center justify-center p-4">
+                        <img src="https://i.pinimg.com/736x/be/0d/51/be0d51422f5e9123e648d75bf9064a18.jpg" alt="LightSpeed Black 6" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 border-t border-gray-800">
+                        <h4 class="font-display text-xl font-bold uppercase text-white">Heel Lockdown Collar</h4>
+                        <p class="text-xs text-gray-400 mt-1">Padded ankle collar for secure, blister-free wear.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews" class="py-20 bg-darkCard border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-volt text-xs font-bold tracking-widest uppercase bg-volt/10 px-3 py-1 rounded-full border border-volt/20">Customer Feedback</span>
+                <h2 class="font-display text-5xl font-black uppercase text-white mt-2">Rated 4.9/5 by Athletes</h2>
+                <p class="text-gray-400 text-base">See what verified buyers across the UAE and GCC are saying about LightSpeed Black.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-obsidian border border-gray-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-volt text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic">"The multi-window air units make standing and walking all day feel completely effortless. Incredible build quality!"</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between text-xs font-bold text-gray-400">
+                        <span>Tariq Al-Maktoum</span>
+                        <span class="text-green-400">Verified Buyer • Dubai</span>
+                    </div>
+                </div>
+
+                <div class="bg-obsidian border border-gray-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-volt text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic">"Ordered through Daal Khor and received it next day in Abu Dhabi. The arch support and mesh breathability are top-tier."</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between text-xs font-bold text-gray-400">
+                        <span>Zayed Al-Hashimi</span>
+                        <span class="text-green-400">Verified Buyer • Abu Dhabi</span>
+                    </div>
+                </div>
+
+                <div class="bg-obsidian border border-gray-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-volt text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic">"Sleek blackout aesthetic that goes with everything. Omar Noor and Muhammad Yasem hit a home run with this release!"</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between text-xs font-bold text-gray-400">
+                        <span>Faisal Al-Nuaimi</span>
+                        <span class="text-green-400">Verified Buyer • Ajman</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-20 bg-obsidian border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-neonCyan text-xs font-bold tracking-widest uppercase bg-neonCyan/10 px-3 py-1 rounded-full border border-neonCyan/20">Common Questions</span>
+                <h2 class="font-display text-5xl font-black uppercase text-white mt-2">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-darkCard border border-gray-800 rounded-xl p-6">
+                    <h3 class="font-display text-xl font-bold uppercase text-white mb-2">How fast is shipping within the UAE & GCC?</h3>
+                    <p class="text-gray-400 text-sm">All orders placed through Daal Khor ship within 24 hours with express delivery across Dubai, Abu Dhabi, Sharjah, Ajman, and GCC countries.</p>
+                </div>
+
+                <div class="bg-darkCard border border-gray-800 rounded-xl p-6">
+                    <h3 class="font-display text-xl font-bold uppercase text-white mb-2">Are these true to size?</h3>
+                    <p class="text-gray-400 text-sm">Yes, LightSpeed Black follows standard US sizing. If you prefer a looser fit for thick socks, we recommend sizing up by 0.5.</p>
+                </div>
+
+                <div class="bg-darkCard border border-gray-800 rounded-xl p-6">
+                    <h3 class="font-display text-xl font-bold uppercase text-white mb-2">Who designed the LightSpeed Black?</h3>
+                    <p class="text-gray-400 text-sm">This exclusive release is brought to you by Daal Khor, co-founded by Omar Noor and Muhammad Yasem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-obsidian border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div class="flex items-center gap-3">
+                <img src="https://i.pinimg.com/736x/7d/d7/91/7dd7915ced05d294c2934b06c4b168e4.jpg" alt="Logo" class="h-8 w-auto object-contain">
+                <div class="flex flex-col">
+                    <span class="font-display text-2xl font-bold tracking-wider text-white uppercase leading-none">DAAL KHOR</span>
+                    <span class="text-[8px] tracking-widest text-volt uppercase font-semibold">BY OMAR NOOR & MUHAMMAD YASEM</span>
+                </div>
+            </div>
+            <p class="text-xs text-gray-500">© 2026 LightSpeed Black • All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Images array for 360 viewer and gallery
+        const images360 = [
+            "https://i.pinimg.com/736x/c2/59/f6/c259f6e86b29f94a593ef326716bd933.jpg",
+            "https://i.pinimg.com/736x/ab/71/23/ab7123aaf680f3380c5c30259a3d92ff.jpg",
+            "https://i.pinimg.com/736x/38/8d/65/388d6516c53c0ae63881718b7a390408.jpg",
+            "https://i.pinimg.com/736x/15/f8/3c/15f83c8627d3f9fcb1083976a1186f04.jpg",
+            "https://i.pinimg.com/736x/59/4a/84/594a84244edde2da4009da9d3ca475f6.jpg",
+            "https://i.pinimg.com/736x/be/0d/51/be0d51422f5e9123e648d75bf9064a18.jpg",
+            "https://i.pinimg.com/736x/37/6a/86/376a86ae0a24fd1ed881be82bf0096b5.jpg"
+        ];
+
+        let currentAngle = 0;
+
+        function init360Thumbs() {
+            const grid = document.getElementById('thumb360Grid');
+            if(!grid) return;
+            grid.innerHTML = '';
+            images360.forEach((src, idx) => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.className = `w-14 h-14 rounded-lg object-cover border-2 cursor-pointer transition-all ${idx === currentAngle ? 'border-volt scale-105' : 'border-transparent opacity-70 hover:opacity-100'}`;
+                img.onclick = () => setAngle(idx);
+                grid.appendChild(img);
+            });
+        }
+
+        function setAngle(idx) {
+            currentAngle = idx;
+            document.getElementById('viewer360Img').src = images360[currentAngle];
+            document.getElementById('studio360Slider').value = currentAngle;
+            document.getElementById('angleIndex').innerText = currentAngle + 1;
+            init360Thumbs();
+        }
+
+        function rotate360(direction) {
+            currentAngle = (currentAngle + direction + images360.length) % images360.length;
+            setAngle(currentAngle);
+        }
+
+        function update360FromSlider(val) {
+            setAngle(parseInt(val));
+        }
+
+        function switchHeroImg(src) {
+            document.getElementById('mainHeroImg').src = src;
+            document.querySelectorAll('.hero-thumb').forEach(t => {
+                if(t.src === src) {
+                    t.classList.add('border-volt', 'opacity-100');
+                    t.classList.remove('border-transparent', 'opacity-70');
+                } else {
+                    t.classList.remove('border-volt', 'opacity-100');
+                    t.classList.add('border-transparent', 'opacity-70');
+                }
+            });
+        }
+
+        function selectHeroSize(btn, size) {
+            document.querySelectorAll('#heroSizeGrid button').forEach(b => {
+                b.className = "size-btn py-2 bg-darkCard border border-gray-700 rounded-lg font-bold hover:border-volt transition-all text-gray-200";
+            });
+            btn.className = "size-btn py-2 bg-volt text-black border border-volt font-bold rounded-lg shadow-lg";
+            document.getElementById('selectedSizeText').innerHTML = `Selected Size: <span class="text-volt font-bold">${size}</span> (Ready for Express Shipping)`;
+        }
+
+        function calculateSpeedMetrics() {
+            const speed = document.getElementById('speedInput').value;
+            const pitch = parseFloat(document.getElementById('pitchInput').value);
+            
+            let energy = (85 + (speed * 2.2) * pitch).toFixed(1);
+            if(energy > 98) energy = 98.5;
+            
+            document.getElementById('energyReturnMetric').innerText = energy + '%';
+            document.getElementById('responsivenessPercent').innerText = Math.round(energy) + '%';
+            document.getElementById('responsivenessBar').style.width = Math.round(energy) + '%';
+        }
+
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').onclick = () => {
+            const nav = document.getElementById('mobileNav');
+            nav.classList.toggle('hidden');
+        };
+
+        window.onload = () => {
+            init360Thumbs();
+        };
+    </script>
+</body>
+</html>
