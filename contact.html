@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Daal Khor by Omar Noor and Muhammad Yasem</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            neonVolt: '#CCFF00',
+            neonOrange: '#FF4D00',
+            neonPink: '#FF0055',
+            neonCyan: '#00E5FF',
+            neonPurple: '#A020F0',
+            darkBg: '#05070d',
+            cardBg: 'rgba(15, 18, 29, 0.8)',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          },
+          animation: {
+            'gradient-bg': 'gradientShift 10s ease infinite',
+            'float-glow': 'floatGlow 6s ease-in-out infinite alternate',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+          },
+          keyframes: {
+            gradientShift: {
+              '0%, 100%': { 'background-position': '0% 50%' },
+              '50%': { 'background-position': '100% 50%' }
+            },
+            floatGlow: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '50%': { transform: 'translate(30px, -20px) scale(1.15)' },
+              '100%': { transform: 'translate(-20px, 20px) scale(0.95)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #05070d;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* Vibrant Dark Mesh Background Gradient */
+    .mesh-gradient-bg {
+      background: linear-gradient(-45deg, #05070d, #0d0614, #00121c, #14030a, #090e1a);
+      background-size: 400% 400%;
+      animation: gradientShift 12s ease infinite;
+    }
+
+    /* Multi-color Gradient Text */
+    .vibrant-text-gradient {
+      background: linear-gradient(135deg, #CCFF00 0%, #00E5FF 30%, #FF0055 70%, #FF4D00 100%);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 8s ease infinite;
+    }
+
+    /* Glassmorphism Surface */
+    .glass-card {
+      background: rgba(15, 18, 29, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    /* Glowing Border Gradient Wrapper */
+    .neon-border-box {
+      position: relative;
+    }
+    .neon-border-box::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 1.5rem;
+      background: linear-gradient(45deg, #FF4D00, #FF0055, #A020F0, #00E5FF, #CCFF00);
+      background-size: 300% 300%;
+      animation: gradientShift 6s ease infinite;
+      z-index: -1;
+      opacity: 0.8;
+      filter: blur(5px);
+      transition: opacity 0.3s ease, filter 0.3s ease;
+    }
+    .neon-border-box:hover::before {
+      opacity: 1;
+      filter: blur(10px);
+    }
+
+    /* Vibrant Neon Interactive Button */
+    .neon-glow-btn {
+      background: linear-gradient(90deg, #FF4D00 0%, #FF0055 50%, #00E5FF 100%);
+      background-size: 200% auto;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .neon-glow-btn:hover {
+      background-position: right center;
+      box-shadow: 0 0 30px rgba(255, 77, 0, 0.6), 0 0 50px rgba(0, 229, 255, 0.5);
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    /* Input Focus Glow */
+    .neon-input:focus {
+      border-color: #00E5FF;
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.5), inset 0 0 10px rgba(0, 229, 255, 0.2);
+    }
+
+    /* Custom Neon Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #05070d;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #FF4D00, #FF0055, #00E5FF);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="mesh-gradient-bg min-h-screen flex flex-col justify-between relative antialiased selection:bg-neonVolt selection:text-black">
+
+  <div class="fixed top-10 left-10 w-96 h-96 bg-neonOrange/25 rounded-full blur-[130px] pointer-events-none animate-float-glow"></div>
+  <div class="fixed bottom-10 right-10 w-[30rem] h-[30rem] bg-neonCyan/20 rounded-full blur-[150px] pointer-events-none animate-float-glow" style="animation-delay: -3s;"></div>
+  <div class="fixed top-1/2 left-1/3 w-80 h-80 bg-neonPink/20 rounded-full blur-[140px] pointer-events-none animate-float-glow" style="animation-delay: -1.5s;"></div>
+
+  <header class="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-gray-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Company Brand & Logo -->
+      <div class="flex items-center space-x-4">
+        <a href="index.html" class="flex items-center space-x-4 group">
+          <div class="bg-black p-1 rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(255,77,0,0.5)] border-2 border-neonOrange w-12 h-12 transform group-hover:rotate-6 transition duration-300 overflow-hidden">
+            <img src="https://i.pinimg.com/736x/7d/d7/91/7dd7915ced05d294c2934b06c4b168e4.jpg" alt="Daal Khor Logo" class="max-h-full max-w-full object-cover">
+          </div>
+          <div>
+            <span class="text-2xl font-black uppercase tracking-wider block leading-none text-white drop-shadow-[0_2px_10px_rgba(0,229,255,0.8)] group-hover:text-neonVolt transition-colors">
+              DAAL KHOR
+            </span>
+            <span class="text-[10px] text-neonVolt font-black tracking-widest uppercase block mt-1">
+              BY OMAR NOOR & MUHAMMAD YASEM
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation / Back Link -->
+      <div class="flex items-center space-x-3">
+        <a href="index.html" 
+           class="px-4 py-2 bg-darkCard border border-gray-700 hover:border-neonVolt text-gray-200 font-bold rounded-xl text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+          <i class="fa-solid fa-arrow-left"></i> Back to Store
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="relative z-10 my-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-grow">
+    
+    <!-- Title Header -->
+    <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+      <span class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest bg-gradient-to-r from-neonOrange/20 via-neonPink/20 to-neonCyan/20 border border-neonOrange/40 text-neonVolt shadow-lg">
+        <i class="fa-solid fa-bolt mr-2 animate-pulse text-neonOrange"></i> Direct Support Portal
+      </span>
+      <h1 class="text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+        GET IN TOUCH WITH <br>
+        <span class="vibrant-text-gradient">DAAL KHOR</span>
+      </h1>
+      <p class="text-gray-300 text-sm sm:text-base font-medium max-w-xl mx-auto">
+        Have questions about LightSpeed Black, custom sizing, or delivery details? Drop us a message below.
+      </p>
+    </div>
+
+    <!-- 2 Column Responsive Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <div class="lg:col-span-5 space-y-5">
+        
+        <!-- Support Card 1 -->
+        <div class="glass-card p-6 rounded-3xl border border-gray-800/80 hover:border-neonVolt transition duration-300 group hover:shadow-[0_0_25px_rgba(204,255,0,0.3)]">
+          <div class="flex items-start space-x-4">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-neonVolt to-green-500 flex items-center justify-center text-black font-black text-xl shrink-0 group-hover:scale-110 transition">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div>
+              <h3 class="font-black uppercase text-base text-white group-hover:text-neonVolt transition">Customer Assistance</h3>
+              <p class="text-xs text-gray-400 mt-1">Get real-time guidance regarding footwear fit, arch support, and sizing.</p>
+              <span class="inline-block mt-2 text-xs font-bold text-neonVolt uppercase tracking-wider"><i class="fa-solid fa-circle-check mr-1"></i> Active 24/7 Support</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Support Card 2 -->
+        <div class="glass-card p-6 rounded-3xl border border-gray-800/80 hover:border-neonCyan transition duration-300 group hover:shadow-[0_0_25px_rgba(0,229,255,0.3)]">
+          <div class="flex items-start space-x-4">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-neonCyan to-blue-600 flex items-center justify-center text-black font-black text-xl shrink-0 group-hover:scale-110 transition">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div>
+              <h3 class="font-black uppercase text-base text-white group-hover:text-neonCyan transition">Order & UAE Shipping</h3>
+              <p class="text-xs text-gray-400 mt-1">Track dispatch status for official 63 AED LightSpeed Black orders.</p>
+              <span class="inline-block mt-2 text-xs font-bold text-neonCyan uppercase tracking-wider"><i class="fa-solid fa-bolt mr-1"></i> Express Courier Delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Support Card 3 -->
+        <div class="glass-card p-6 rounded-3xl border border-gray-800/80 hover:border-neonPink transition duration-300 group hover:shadow-[0_0_25px_rgba(255,0,85,0.3)]">
+          <div class="flex items-start space-x-4">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-neonPink to-purple-600 flex items-center justify-center text-white font-black text-xl shrink-0 group-hover:scale-110 transition">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <h3 class="font-black uppercase text-base text-white group-hover:text-neonPink transition">100% Authentic Product Guarantee</h3>
+              <p class="text-xs text-gray-400 mt-1">Official Daal Khor release with guaranteed quality assurance.</p>
+              <span class="inline-block mt-2 text-xs font-bold text-neonPink uppercase tracking-wider"><i class="fa-solid fa-badge-check mr-1"></i> Verified Merchant</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Store Badge -->
+        <div class="glass-card p-6 rounded-3xl border border-neonOrange/30 bg-gradient-to-br from-neonOrange/10 via-transparent to-neonPink/10 text-center">
+          <p class="text-xs font-black uppercase text-gray-300 tracking-wider">Created Store Experience</p>
+          <p class="text-xl font-black uppercase text-white mt-1">DAAL KHOR <span class="text-neonVolt">EXECUTIVE</span></p>
+          <span class="text-[11px] text-gray-400 block mt-1 font-semibold">Brought to you by Omar Noor & Muhammad Yasem</span>
+        </div>
+
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="neon-border-box rounded-3xl">
+          <div class="glass-card p-8 sm:p-12 rounded-3xl relative overflow-hidden">
+            
+            <!-- Form Header Badge -->
+            <div class="flex items-center justify-between pb-6 mb-8 border-b border-gray-800/80">
+              <div>
+                <h2 class="text-2xl font-black uppercase tracking-tight text-white">Send Your Message</h2>
+                <p class="text-xs text-neonVolt font-semibold mt-1">Directly routes to Daal Khor support desk</p>
+              </div>
+              <div class="w-10 h-10 rounded-xl bg-black/60 border border-neonCyan/40 flex items-center justify-center text-neonCyan">
+                <i class="fa-solid fa-paper-plane"></i>
+              </div>
+            </div>
+
+            <!-- Formspree Endpoint Form -->
+            <form id="contactFormspree" action="https://formspree.io/f/mzedjvro" method="POST" class="space-y-6" novalidate>
+              
+              <!-- Field 1: Email Input -->
+              <div>
+                <label for="email" class="block text-xs font-black uppercase tracking-wider text-gray-200 mb-2">
+                  Your Email Address <span class="text-neonPink">*</span>
+                </label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400">
+                    <i class="fa-solid fa-at text-neonCyan"></i>
+                  </span>
+                  <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    required 
+                    placeholder="e.g. buyer@example.com" 
+                    class="neon-input w-full bg-black/70 border border-gray-800 rounded-2xl py-4 pl-12 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none transition font-medium">
+                </div>
+                <span id="emailError" class="hidden text-[11px] font-bold text-neonPink mt-1.5 block">
+                  <i class="fa-solid fa-circle-exclamation mr-1"></i> Please enter a valid email address.
+                </span>
+              </div>
+
+              <!-- Field 2: Content / Message Input -->
+              <div>
+                <label for="message" class="block text-xs font-black uppercase tracking-wider text-gray-200 mb-2">
+                  Your Content / Message <span class="text-neonPink">*</span>
+                </label>
+                <div class="relative">
+                  <textarea 
+                    name="message" 
+                    id="message" 
+                    rows="5" 
+                    required 
+                    placeholder="Write your message, order inquiry, or content here..." 
+                    class="neon-input w-full bg-black/70 border border-gray-800 rounded-2xl p-4 text-sm text-white placeholder-gray-500 focus:outline-none transition font-medium"></textarea>
+                </div>
+                <span id="messageError" class="hidden text-[11px] font-bold text-neonPink mt-1.5 block">
+                  <i class="fa-solid fa-circle-exclamation mr-1"></i> Message content cannot be empty.
+                </span>
+              </div>
+
+              <!-- Submit Button -->
+              <button 
+                type="submit" 
+                id="submitBtn" 
+                class="neon-glow-btn w-full py-5 rounded-2xl font-black text-sm uppercase tracking-wider text-white shadow-2xl flex items-center justify-center space-x-3 cursor-pointer">
+                <i class="fa-solid fa-paper-plane text-neonVolt"></i>
+                <span>SEND MESSAGE TO DAAL KHOR</span>
+              </button>
+
+              <!-- Dynamic Status Banner -->
+              <div id="formStatusBox" class="hidden p-5 rounded-2xl text-xs font-black uppercase tracking-wider transition duration-300"></div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script>
+    const form = document.getElementById('contactFormspree');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+    const submitBtn = document.getElementById('submitBtn');
+    const statusBox = document.getElementById('formStatusBox');
+
+    // Email regex validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+\$/;
+
+    // Real-time input handlers
+    emailInput.addEventListener('input', () => {
+      if (emailRegex.test(emailInput.value.trim())) {
+        emailError.classList.add('hidden');
+        emailInput.classList.remove('border-neonPink');
+        emailInput.classList.add('border-neonVolt');
+      } else {
+        emailInput.classList.remove('border-neonVolt');
+      }
+    });
+
+    messageInput.addEventListener('input', () => {
+      if (messageInput.value.trim().length > 0) {
+        messageError.classList.add('hidden');
+        messageInput.classList.remove('border-neonPink');
+        messageInput.classList.add('border-neonVolt');
+      } else {
+        messageInput.classList.remove('border-neonVolt');
+      }
+    });
+
+    // Form submission listener
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      let isValid = true;
+
+      // Validate Email
+      if (!emailRegex.test(emailInput.value.trim())) {
+        emailError.classList.remove('hidden');
+        emailInput.classList.add('border-neonPink');
+        isValid = false;
+      } else {
+        emailError.classList.add('hidden');
+      }
+
+      // Validate Message Content
+      if (messageInput.value.trim().length === 0) {
+        messageError.classList.remove('hidden');
+        messageInput.classList.add('border-neonPink');
+        isValid = false;
+      } else {
+        messageError.classList.add('hidden');
+      }
+
+      if (!isValid) return;
+
+      // Set Loading UI State
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+      submitBtn.innerHTML = `
+        <i class="fa-solid fa-spinner animate-spin text-neonVolt"></i>
+        <span>SENDING TO DAAL KHOR...</span>
+      `;
+      statusBox.classList.add('hidden');
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          showStatus(
+            ' SUCCESS! Your message has been sent to Daal Khor. We will reply to your email shortly.',
+            'success'
+          );
+          form.reset();
+          emailInput.classList.remove('border-neonVolt');
+          messageInput.classList.remove('border-neonVolt');
+        } else {
+          const data = await response.json();
+          if (Object.hasOwn(data, 'errors')) {
+            showStatus(
+              ' SUBMISSION ERROR: ' + data.errors.map(err => err.message).join(', '),
+              'error'
+            );
+          } else {
+            showStatus(' OOPS! An error occurred while sending your message. Please try again.', 'error');
+          }
+        }
+      } catch (err) {
+        showStatus(' CONNECTIVITY ERROR: Please check your internet connection.', 'error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+        submitBtn.innerHTML = `
+          <i class="fa-solid fa-paper-plane text-neonVolt"></i>
+          <span>SEND MESSAGE TO DAAL KHOR</span>
+        `;
+      }
+    });
+
+    function showStatus(msg, type) {
+      statusBox.innerText = msg;
+      statusBox.classList.remove('hidden');
+
+      if (type === 'success') {
+        statusBox.className = "p-5 rounded-2xl text-xs font-black uppercase tracking-wider bg-neonVolt/10 text-neonVolt border border-neonVolt/40 shadow-[0_0_20px_rgba(204,255,0,0.2)]";
+      } else {
+        statusBox.className = "p-5 rounded-2xl text-xs font-black uppercase tracking-wider bg-neonPink/10 text-neonPink border border-neonPink/40 shadow-[0_0_20px_rgba(255,0,85,0.2)]";
+      }
+    }
+  </script>
+
+  <footer class="relative z-10 bg-black/90 border-t border-gray-900 py-8 text-center text-gray-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="flex items-center justify-center space-x-3">
+        <div class="bg-black p-1 rounded-xl w-8 h-8 flex items-center justify-center shadow-[0_0_15px_rgba(255,77,0,0.4)] overflow-hidden">
+          <img src="https://i.pinimg.com/736x/7d/d7/91/7dd7915ced05d294c2934b06c4b168e4.jpg" alt="Daal Khor Logo" class="max-h-full max-w-full object-cover">
+        </div>
+        <span class="text-lg font-black uppercase tracking-widest text-white">DAAL KHOR</span>
+      </div>
+      <p class="text-xs text-gray-400 font-medium">
+        Created by <strong class="text-neonVolt">Omar Noor & Muhammad Yasem</strong>
+      </p>
+      <div class="text-xs font-bold uppercase tracking-widest text-gray-400 pt-4 border-t border-gray-900/80">
+        © 2026 LightSpeed Black • All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
